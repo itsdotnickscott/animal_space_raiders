@@ -1,0 +1,30 @@
+[gd_resource type="Resource" load_steps=6 format=2]
+
+[ext_resource path="res://units/ability.gd" type="Script" id=1]
+[ext_resource path="res://units/unit_info.gd" type="Script" id=2]
+[ext_resource path="res://units/action.gd" type="Script" id=3]
+
+[sub_resource type="Resource" id=1]
+script = ExtResource( 3 )
+action_type = 0
+targeting = 0
+damage_type = 0
+scaling = 0.3
+
+[sub_resource type="Resource" id=2]
+script = ExtResource( 1 )
+sequence = [ SubResource( 1 ) ]
+hero = "fire_fox"
+descrip = "30% ATK"
+cost = 0
+
+[resource]
+script = ExtResource( 2 )
+hero_id = "fire_fox"
+base_hp = 9
+base_atk = 4
+base_mag = 2
+hp_growth = 1
+atk_growth = 1
+mag_growth = 1
+ability_set = [ SubResource( 2 ) ]

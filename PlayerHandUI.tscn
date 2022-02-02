@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/fonts/m3x6.tres" type="DynamicFont" id=1]
+[ext_resource path="res://player_hand_ui.gd" type="Script" id=2]
+
+[node name="PlayerHandUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = 9.0
+margin_top = 511.0
+margin_right = 353.0
+margin_bottom = 595.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EndTurnButton" type="Button" parent="."]
+margin_left = 287.0
+margin_top = 613.0
+margin_right = 354.0
+margin_bottom = 633.0
+custom_fonts/font = ExtResource( 1 )
+text = "End Turn"
+
+[connection signal="pressed" from="EndTurnButton" to="." method="_on_EndTurnButton_pressed"]

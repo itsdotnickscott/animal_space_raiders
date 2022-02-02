@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://units/Unit.tscn" type="PackedScene" id=1]
+[ext_resource path="res://battle.gd" type="Script" id=2]
+[ext_resource path="res://PlayerHandUI.tscn" type="PackedScene" id=3]
+
+[node name="Battle" type="Node2D"]
+script = ExtResource( 2 )
+unit_ids = [ "fire_fox", "fire_fox", "fire_fox", "fire_fox", "fire_fox", "fire_fox", "fire_fox", "fire_fox" ]
+
+[node name="PlayerHandUI" parent="." instance=ExtResource( 3 )]
+
+[node name="Unit1" parent="." instance=ExtResource( 1 )]
+position = Vector2( 116, 204 )
+
+[node name="Unit2" parent="." instance=ExtResource( 1 )]
+position = Vector2( 116, 284 )
+
+[node name="Unit3" parent="." instance=ExtResource( 1 )]
+position = Vector2( 34, 159 )
+
+[node name="Unit4" parent="." instance=ExtResource( 1 )]
+position = Vector2( 34, 329 )
+
+[node name="Unit5" parent="." instance=ExtResource( 1 )]
+position = Vector2( 242, 204 )
+
+[node name="Unit6" parent="." instance=ExtResource( 1 )]
+position = Vector2( 242, 284 )
+
+[node name="Unit7" parent="." instance=ExtResource( 1 )]
+position = Vector2( 324, 159 )
+
+[node name="Unit8" parent="." instance=ExtResource( 1 )]
+position = Vector2( 324, 329 )
